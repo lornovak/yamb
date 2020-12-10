@@ -1,6 +1,5 @@
 import static javax.swing.JOptionPane.*;
 import controlP5.*;
-import processing.sound.*;
 import ddf.minim.*;
 
 
