@@ -1,0 +1,40 @@
+class Drawer{
+  
+  PFont font;
+  
+  
+  Drawer(){
+    //font = createFont("Cooper black",18,true);
+    font = loadFont("SegoePrint-Bold-48.vlw");
+  }
+  
+  void makeText(String text, int fontSize,  
+                    int fontColor,int center_x, int center_y){
+    setFont(fontSize, fontColor);
+    textAlign(CENTER);
+    text(text,center_x, center_y);
+  }
+  
+  void makeTextRules(String text, int fontSize,  
+                    int fontColor,int center_x, int center_y){
+    setFont(fontSize, fontColor);
+    textAlign(LEFT);
+    text(text,center_x, center_y);
+  }
+  
+  void makeTextLeft(String text, int fontSize,  
+                    int fontColor,int center_x, int center_y){
+    setFont(fontSize, fontColor);
+    textAlign(LEFT);
+    text(text,center_x, center_y);
+  }
+  
+  void setFont(int fontSize, int fontColor){
+    textFont(font,fontSize);
+    fill(fontColor);
+  }
+  
+  ControlFont getControlFont(int fontSize){
+    return new ControlFont(font, fontSize);
+  }
+}
